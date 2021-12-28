@@ -65,6 +65,9 @@ animetheme = {'id': 7512, 'type': 'OP', 'sequence': None, 'group': None, 'slug':
 # print(at.video("Gamers-OP1-NCBD1080.webm"))
 
 # print(at.search_anime("Bakemonogatari"))
+# animes = at.search_anime("Bakemonogatari")["anime"]
+# for anime in animes:
+#     print(anime)
 # print(at.anime("bakemonogatari"))
 anime = at.anime("bakemonogatari")["anime"]
 print(anime)

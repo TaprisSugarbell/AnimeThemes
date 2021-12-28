@@ -42,7 +42,8 @@ class AnimeThemes:
     def search_anime(self, query):
         self.__params.update(
             {
-                "q": query
+                "q": query,
+                "include": "animethemes.animethemeentries.videos,images"
             }
         )
         return self.__session_requests(
@@ -57,7 +58,7 @@ class AnimeThemes:
     def anime(self, slug: str = None):
         self.__set_params(
             {
-                "include": "animethemes.animethemeentries.videos"
+                "include": "animethemes.animethemeentries.videos,images"
             }
         )
         _da = self.__session_requests(
