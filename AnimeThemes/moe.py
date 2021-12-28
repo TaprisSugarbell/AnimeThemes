@@ -83,7 +83,7 @@ class AnimeThemes:
     def animethemes(self, theme_id: int):
         self.__set_params(
             {
-                "include": "animethemeentries.videos"
+                "include": "anime,animethemeentries.videos"
             }
         )
         return self.__session_requests(
