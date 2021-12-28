@@ -57,6 +57,9 @@ animetheme = {'id': 7512, 'type': 'OP', 'sequence': None, 'group': None, 'slug':
 # for theme in animethemes:
 #     print(theme)
 
+# ANIMETHEME
+print(at.animethemes(3373))
+
 # for i in animetheme["animethemeentries"]:
 #     for j in i["videos"]:
 #         print(j)
@@ -69,7 +72,7 @@ animetheme = {'id': 7512, 'type': 'OP', 'sequence': None, 'group': None, 'slug':
 # for anime in animes:
 #     print(anime)
 
-print(at.search_anime(anime_id=218))
+# print(at.search_anime(anime_id=218))
 
 # print(at.anime("bakemonogatari"))
 # anime = at.anime("bakemonogatari")["anime"]

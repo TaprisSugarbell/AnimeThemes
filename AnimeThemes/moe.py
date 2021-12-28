@@ -79,3 +79,13 @@ class AnimeThemes:
             return _da.json()
         else:
             return _da.content
+
+    def animethemes(self, theme_id: int):
+        self.__set_params(
+            {
+                "include": "animethemeentries.videos"
+            }
+        )
+        return self.__session_requests(
+            self.__base + "animetheme/" + str(theme_id)
+        ).json()
