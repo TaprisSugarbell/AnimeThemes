@@ -68,22 +68,25 @@ animetheme = {'id': 7512, 'type': 'OP', 'sequence': None, 'group': None, 'slug':
 # animes = at.search_anime("Bakemonogatari")["anime"]
 # for anime in animes:
 #     print(anime)
+
+print(at.search_anime(anime_id=218))
+
 # print(at.anime("bakemonogatari"))
-anime = at.anime("bakemonogatari")["anime"]
-print(anime)
-animethemes = anime["animethemes"]
+# anime = at.anime("bakemonogatari")["anime"]
+# print(anime)
+# animethemes = anime["animethemes"]
 # vid = animethemes[-1]
-vid = animethemes
-print(vid)
-print("\n\n")
-for i in vid:
-    print(i)
-    for j in i["animethemeentries"]:
-        print(j)
-        for h in j["videos"]:
-            print(h)
-            print("link:", h["link"].replace("staging.", ""))
-            print("\n\n")
+# vid = animethemes
+# print(vid)
+# print("\n\n")
+# for i in vid:
+#     print(i)
+#     for j in i["animethemeentries"]:
+#         print(j)
+#         for h in j["videos"]:
+#             print(h)
+#             print("link:", h["link"].replace("staging.", ""))
+#             print("\n\n")
 
 # for theme in animethemes:
 #     print(theme)

@@ -39,13 +39,24 @@ class AnimeThemes:
             self.__base + "search"
         ).json()
 
-    def search_anime(self, query):
-        self.__params.update(
-            {
-                "q": query,
-                "include": "animethemes.animethemeentries.videos,images"
-            }
-        )
+    def search_anime(self, query: str = None, anime_id: int = None):
+        _include = "animethemes.animethemeentries.videos,images"
+        if query:
+            self.__set_params(
+                {
+                    "q": query,
+                    "include": _include
+                }
+            )
+        elif anime_id:
+            self.__set_params(
+                {
+                    "filter[id]": anime_id,
+                    "include": _include
+                }
+            )
+        else:
+            pass
         return self.__session_requests(
             self.__base + "anime"
         ).json()
